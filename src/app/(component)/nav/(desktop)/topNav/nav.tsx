@@ -1,0 +1,71 @@
+"use client";
+
+import React, { useState } from "react";
+import Image from "next/image";
+import icons8 from "../../../../images/icons8.png";
+import Link from "next/link";
+import Help from "./help";
+
+const DesktopNav = () => {
+  // open help
+  const [openHelp, setOpenHelp] = useState<boolean>(false);
+
+  return (
+    <section className=" w-full flex flex-row justify-between">
+      {/* jordon logo */}
+      <Link href="/jordanLogo">
+        <p>
+          <Image
+            src={icons8}
+            alt="jordan logo"
+            width={30}
+            height={30}
+            priority
+          />
+        </p>
+      </Link>
+
+      <div className="flex flex-row gap-3 pt-2 text-black">
+        {/* find a store */}
+        <Link className="hover:text-gray-500  text-sm" href="/findStore">
+          <p>Find a store</p>
+        </Link>
+
+        <p className="text-sm">|</p>
+
+        {/* HELP */}
+        <Link
+          onMouseEnter={() => setOpenHelp(true)}
+          onMouseLeave={() => setOpenHelp(false)}
+          className="hover:text-gray-500 relative text-sm"
+          href="/findStore"
+        >
+          <p>Help</p>
+
+          {/* help dropdown */}
+          {openHelp && (
+            <div>
+              <Help />
+            </div>
+          )}
+        </Link>
+
+        <p className="text-sm">|</p>
+
+        {/* JOIN US */}
+        <Link className="hover:text-gray-500  text-sm" href="/joinUs">
+          <p>Join us</p>
+        </Link>
+
+        <p className="text-sm">|</p>
+
+        {/* find a store */}
+        <Link className="hover:text-gray-500  text-sm" href="/findStore">
+          <p>Sign up</p>
+        </Link>
+      </div>
+    </section>
+  );
+};
+
+export default DesktopNav;
