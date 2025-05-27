@@ -2,13 +2,12 @@
 
 import { AnimatePresence, motion } from "motion/react";
 import React, { useState } from "react";
-import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
-import Menu from "../menu";
-import Featured from "./featured/Featured";
+import { LuChevronLeft } from "react-icons/lu";
+import NewsMain from "../newsMain";
 
 // type Props = {};
 
-const NewsMain = () => {
+const Featured = () => {
   // open menu
   const [open, setOpen] = useState<boolean>(false);
 
@@ -16,14 +15,8 @@ const NewsMain = () => {
     setOpen((prev) => !prev);
   };
 
-  // open featured
-  const [featured, setFeatured] = useState<boolean>(false);
-
-  const handleFeatured = () => {
-    setFeatured((prev) => !prev);
-  };
-
   // animation variant
+
   const variant = {
     // initial
     hidden: {
@@ -66,36 +59,25 @@ const NewsMain = () => {
       >
         <div className="flex flex-row  text-xl" onClick={handleOpen}>
           <LuChevronLeft className=" h-6" />
-          <p>All</p>
+          <p>News & Featured</p>
         </div>
-        <h1 className=" mt-5 text-2xl font-semibold">New & Featured</h1>
+
+        <h1 className=" mt-5 text-2xl font-semibold">Featured</h1>
 
         <ul className="flex flex-col gap-5">
           {/* featured */}
-          <li
-            className="flex flex-row justify-between text-gray-500 "
-            onClick={handleFeatured}
-          >
-            Featured
-            <LuChevronRight className="h-6" />
+          <li className="flex flex-row justify-between text-gray-500 ">
+            Shop All New Arrivals
           </li>
 
           {/* shop icons */}
           <li className="flex flex-row justify-between text-gray-500 ">
-            Shop Icons
-            <LuChevronRight className="h-6" />
+            Best Sellers
           </li>
 
           {/* discover sport */}
           <li className="flex flex-row justify-between text-gray-500 ">
-            Discover Sport
-            <LuChevronRight className="h-6" />
-          </li>
-
-          {/* trending */}
-          <li className="flex flex-row justify-between text-gray-500 ">
-            Trending
-            <LuChevronRight className="h-6" />
+            SNKRS Launch Calender
           </li>
         </ul>
       </div>
@@ -110,21 +92,7 @@ const NewsMain = () => {
               animate="visible"
               exit="leave"
             >
-              <Menu />
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-        {/*featured */}
-        <AnimatePresence>
-          {featured && (
-            <motion.div
-              variants={variant}
-              initial="hidden"
-              animate="visible"
-              exit="leave"
-            >
-              <Featured />
+              <NewsMain />
             </motion.div>
           )}
         </AnimatePresence>
@@ -133,4 +101,4 @@ const NewsMain = () => {
   );
 };
 
-export default NewsMain;
+export default Featured;
