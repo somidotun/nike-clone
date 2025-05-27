@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import React, { useState } from "react";
 import icons8 from "@/app/images/icons8.png";
@@ -22,7 +24,7 @@ const Menu = () => {
       opacity: [0, 0.2, 0.4, 0.6, 0.8, 1],
       x: "100vw",
       transition: {
-        duration: 1,
+        duration: 0.6,
       },
     },
 
@@ -31,7 +33,7 @@ const Menu = () => {
       opacity: 1,
       x: 0,
       transition: {
-        duration: 1,
+        duration: 0.6,
       },
     },
 
@@ -40,7 +42,7 @@ const Menu = () => {
       opacity: [1, 0.8, 0.6, 0.4, 0.2, 0],
       x: "100vw",
       transition: {
-        duration: 1,
+        duration: 0.6,
       },
     },
   };
@@ -56,11 +58,14 @@ const Menu = () => {
       bg-white gap-16 w-[75%]"
       >
         {/* nav links */}
-        <ul className="flex flex-col gap-5 font-normal text-xl">
+        <ul
+          className="flex flex-col gap-5 
+         font-normal text-xl mt-5"
+        >
           {/* news and featured */}
           <li
             onClick={handleOpenNews}
-            className="flex flex-row gap-1
+            className="flex flex-row justify-between gap-1
            hover:text-gray-500"
           >
             News & Featured
@@ -68,19 +73,28 @@ const Menu = () => {
           </li>
 
           {/* men */}
-          <li className="flex flex-row gap-1 hover:text-gray-500">
+          <li
+            className="flex flex-row justify-between gap-1
+           hover:text-gray-500"
+          >
             Men
             <LuChevronRight className=" h-7" />
           </li>
 
           {/* women */}
-          <li className="flex flex-row gap-1 hover:text-gray-500">
+          <li
+            className="flex flex-row justify-between gap-1
+           hover:text-gray-500"
+          >
             Women
             <LuChevronRight className=" h-7" />
           </li>
 
           {/* kids */}
-          <li className="flex flex-row gap-1 hover:text-gray-500">
+          <li
+            className="flex flex-row justify-between gap-1
+           hover:text-gray-500"
+          >
             Kids
             <LuChevronRight className=" h-7" />
           </li>

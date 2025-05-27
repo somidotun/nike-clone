@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -25,7 +26,7 @@ const MobileNav = () => {
       opacity: [0, 0.2, 0.4, 0.6, 0.8, 1],
       x: "100vw",
       transition: {
-        duration: 1,
+        duration: 0.6,
       },
     },
 
@@ -34,7 +35,7 @@ const MobileNav = () => {
       opacity: 1,
       x: 0,
       transition: {
-        duration: 1,
+        duration: 0.6,
       },
     },
 
@@ -43,7 +44,7 @@ const MobileNav = () => {
       opacity: [1, 0.8, 0.6, 0.4, 0.2, 0],
       x: "100vw",
       transition: {
-        duration: 1,
+        duration: 0.6,
       },
     },
   };
