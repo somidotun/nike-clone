@@ -4,12 +4,8 @@ import { AnimatePresence, motion } from "motion/react";
 import React, { useState } from "react";
 import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
 import Menu from "../menu";
-// import Featured from "./featured/Featured";
-// import ShopIcons from "./shopIcons/shopIcon";
-// import Sport from "./discoverSport/sport";
-// import Trending from "./trending/trending";
-
-// type Props = {};
+import Feat from "./featured/featured";
+import Shoes from "./sheos/shoe";
 
 const MenMain = () => {
   // open menu
@@ -19,11 +15,25 @@ const MenMain = () => {
     setOpen((prev) => !prev);
   };
 
+  // open feat
+  const [feat, setFeat] = useState<boolean>(false);
+
+  const handleFeat = () => {
+    setFeat((prev) => !prev);
+  };
+
+  // open Shoe
+  const [shoe, setShoe] = useState<boolean>(false);
+
+  const handleShoe = () => {
+    setShoe((prev) => !prev);
+  };
+
   // animation variant
   const variant = {
     // initial
     hidden: {
-      // opacity: [0, 0.2, 0.4, 0.6, 0.8, 1],
+      opacity: [0, 0.2, 0.4, 0.6, 0.8, 1],
       x: "100vw",
       transition: {
         duration: 0.6,
@@ -68,14 +78,21 @@ const MenMain = () => {
 
         <ul className="flex flex-col gap-5">
           {/* featured */}
-          <li className="flex flex-row justify-between text-gray-500 ">
+          <li
+            className="flex flex-row justify-between
+           text-gray-500 "
+            onClick={handleFeat}
+          >
             Featured
             <LuChevronRight className="h-6" />
           </li>
 
-          {/* Sheos */}
-          <li className="flex flex-row justify-between text-gray-500 ">
-            Sheos
+          {/* Shoes */}
+          <li
+            className="flex flex-row justify-between text-gray-500 "
+            onClick={handleShoe}
+          >
+            Shoes
             <LuChevronRight className="h-6" />
           </li>
 
@@ -110,6 +127,34 @@ const MenMain = () => {
               exit="leave"
             >
               <Menu />
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* open feat */}
+        <AnimatePresence>
+          {feat && (
+            <motion.div
+              variants={variant}
+              initial="hidden"
+              animate="visible"
+              exit="leave"
+            >
+              <Feat />
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* open shoe */}
+        <AnimatePresence>
+          {shoe && (
+            <motion.div
+              variants={variant}
+              initial="hidden"
+              animate="visible"
+              exit="leave"
+            >
+              <Shoes />
             </motion.div>
           )}
         </AnimatePresence>
