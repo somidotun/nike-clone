@@ -7,7 +7,7 @@ import NewsMain from "../newsMain";
 
 // type Props = {};
 
-const Featured = () => {
+const ShopIcons = () => {
   // open news & featured
   const [open, setOpen] = useState<boolean>(false);
 
@@ -62,22 +62,40 @@ const Featured = () => {
           <p>News & Featured</p>
         </div>
 
-        <h1 className=" mt-5 text-2xl font-semibold">Featured</h1>
+        <h1 className=" mt-5 text-2xl font-semibold">Shop Icons</h1>
 
         <ul className="flex flex-col pl-6 gap-5">
-          {/* featured */}
+          {/* Air Force 1 */}
           <li className="flex flex-row justify-between text-gray-500 ">
-            Shop All New Arrivals
+            Air Force 1
           </li>
 
-          {/* shop icons */}
+          {/* Air jordan 1 */}
           <li className="flex flex-row justify-between text-gray-500 ">
-            Best Sellers
+            Air jordan 1
           </li>
 
-          {/* discover sport */}
+          {/* Air Max */}
           <li className="flex flex-row justify-between text-gray-500 ">
-            SNKRS Launch Calender
+            Air Max
+          </li>
+
+          {/* Dunk */}
+          <li className="flex flex-row justify-between text-gray-500 ">Dunk</li>
+
+          {/* Blazer */}
+          <li className="flex flex-row justify-between text-gray-500 ">
+            Blazer
+          </li>
+
+          {/* Pegasus */}
+          <li className="flex flex-row justify-between text-gray-500 ">
+            Pegasus
+          </li>
+
+          {/* Mercurial */}
+          <li className="flex flex-row justify-between text-gray-500 ">
+            Mercurial
           </li>
         </ul>
       </div>
@@ -101,4 +119,4 @@ const Featured = () => {
   );
 };
 
-export default Featured;
+export default ShopIcons;

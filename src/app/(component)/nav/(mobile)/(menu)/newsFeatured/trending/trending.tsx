@@ -7,7 +7,7 @@ import NewsMain from "../newsMain";
 
 // type Props = {};
 
-const Featured = () => {
+const Trending = () => {
   // open news & featured
   const [open, setOpen] = useState<boolean>(false);
 
@@ -62,22 +62,48 @@ const Featured = () => {
           <p>News & Featured</p>
         </div>
 
-        <h1 className=" mt-5 text-2xl font-semibold">Featured</h1>
+        <h1 className=" mt-5 text-2xl font-semibold">Trending</h1>
 
         <ul className="flex flex-col pl-6 gap-5">
-          {/* featured */}
+          {/* Nike Sportswear */}
           <li className="flex flex-row justify-between text-gray-500 ">
-            Shop All New Arrivals
+            Nike Sportswear
           </li>
 
-          {/* shop icons */}
+          {/* Y2K Sneakers */}
           <li className="flex flex-row justify-between text-gray-500 ">
-            Best Sellers
+            Y2K Sneakers
           </li>
 
-          {/* discover sport */}
+          {/* Nike Style By */}
           <li className="flex flex-row justify-between text-gray-500 ">
-            SNKRS Launch Calender
+            Nike Style By
+          </li>
+
+          {/* Teens */}
+          <li
+            className="flex flex-row 
+          justify-between text-gray-500 "
+          >
+            Teens
+          </li>
+
+          {/* EasyOn */}
+          <li
+            className="flex flex-row
+           justify-between text-gray-500 "
+          >
+            EasyOn
+          </li>
+
+          {/* Nike Gift ideas */}
+          <li className="flex flex-row justify-between text-gray-500 ">
+            Nike Gift ideas
+          </li>
+
+          {/* Sustainability */}
+          <li className="flex flex-row justify-between text-gray-500 ">
+            Sustainability
           </li>
         </ul>
       </div>
@@ -101,4 +127,4 @@ const Featured = () => {
   );
 };
 
-export default Featured;
+export default Trending;

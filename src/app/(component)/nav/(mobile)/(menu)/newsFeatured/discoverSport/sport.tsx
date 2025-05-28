@@ -7,7 +7,7 @@ import NewsMain from "../newsMain";
 
 // type Props = {};
 
-const Featured = () => {
+const Sport = () => {
   // open news & featured
   const [open, setOpen] = useState<boolean>(false);
 
@@ -62,22 +62,62 @@ const Featured = () => {
           <p>News & Featured</p>
         </div>
 
-        <h1 className=" mt-5 text-2xl font-semibold">Featured</h1>
+        <h1 className=" mt-5 text-2xl font-semibold">Discover sport</h1>
 
         <ul className="flex flex-col pl-6 gap-5">
-          {/* featured */}
+          {/* Football */}
           <li className="flex flex-row justify-between text-gray-500 ">
-            Shop All New Arrivals
+            Football
           </li>
 
-          {/* shop icons */}
+          {/* Running */}
           <li className="flex flex-row justify-between text-gray-500 ">
-            Best Sellers
+            Running
           </li>
 
-          {/* discover sport */}
+          {/* Basketball */}
           <li className="flex flex-row justify-between text-gray-500 ">
-            SNKRS Launch Calender
+            Basketball
+          </li>
+
+          {/* Fitness */}
+          <li
+            className="flex flex-row justify-between
+           text-gray-500 "
+          >
+            Fitness
+          </li>
+
+          {/* Golf */}
+          <li className="flex flex-row justify-between text-gray-500 ">Golf</li>
+
+          {/* Tennis */}
+          <li className="flex flex-row justify-between text-gray-500 ">
+            Tennis
+          </li>
+
+          {/* Yoga */}
+          <li
+            className="flex flex-row justify-between
+           text-gray-500 "
+          >
+            Yoga
+          </li>
+
+          {/* Dance */}
+          <li
+            className="flex flex-row justify-between
+           text-gray-500 "
+          >
+            Dance
+          </li>
+
+          {/* Skateboarding */}
+          <li
+            className="flex flex-row justify-between
+           text-gray-500 "
+          >
+            Skateboarding
           </li>
         </ul>
       </div>
@@ -101,4 +141,4 @@ const Featured = () => {
   );
 };
 
-export default Featured;
+export default Sport;
