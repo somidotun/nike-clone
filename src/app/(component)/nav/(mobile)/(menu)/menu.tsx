@@ -8,6 +8,7 @@ import Buttons from "@/app/props/buttonWhite";
 import ButtonBlack from "@/app/props/buttonBlack";
 import { motion, AnimatePresence } from "motion/react";
 import NewsMain from "./newsFeatured/newsMain";
+import MenMain from "./men/menMain";
 
 const Menu = () => {
   // openNews
@@ -15,6 +16,13 @@ const Menu = () => {
 
   const handleOpenNews = () => {
     setOpenNews((prev) => !prev);
+  };
+
+  // openMen
+  const [openMen, setOpenMen] = useState<boolean>(false);
+
+  const handleOpenMen = () => {
+    setOpenMen((prev) => !prev);
   };
 
   // animation variant
@@ -74,6 +82,7 @@ const Menu = () => {
 
           {/* men */}
           <li
+            onClick={handleOpenMen}
             className="flex flex-row justify-between gap-1
            hover:text-gray-500"
           >
@@ -127,18 +136,35 @@ const Menu = () => {
         </div>
       </div>
 
-      <AnimatePresence>
-        {openNews && (
-          <motion.div
-            variants={variant}
-            initial="hidden"
-            animate="visible"
-            exit="leave"
-          >
-            <NewsMain />
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <div>
+        {/* new & featured */}
+        <AnimatePresence>
+          {openNews && (
+            <motion.div
+              variants={variant}
+              initial="hidden"
+              animate="visible"
+              exit="leave"
+            >
+              <NewsMain />
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Men */}
+        <AnimatePresence>
+          {openMen && (
+            <motion.div
+              variants={variant}
+              initial="hidden"
+              animate="visible"
+              exit="leave"
+            >
+              <MenMain />
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
     </section>
   );
 };
