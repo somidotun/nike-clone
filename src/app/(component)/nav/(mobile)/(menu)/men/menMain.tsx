@@ -6,6 +6,9 @@ import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
 import Menu from "../menu";
 import Feat from "./featured/featured";
 import Shoes from "./sheos/shoe";
+import Cloth from "./clothing/cloth";
+import Sport from "./discoverSport/sport";
+import Equip from "./accessories/equipment";
 
 const MenMain = () => {
   // open menu
@@ -27,6 +30,27 @@ const MenMain = () => {
 
   const handleShoe = () => {
     setShoe((prev) => !prev);
+  };
+
+  // open Cloth
+  const [cloth, setCloth] = useState<boolean>(false);
+
+  const handleCloth = () => {
+    setCloth((prev) => !prev);
+  };
+
+  // open Sport
+  const [sport, setSport] = useState<boolean>(false);
+
+  const handleSport = () => {
+    setSport((prev) => !prev);
+  };
+
+  // open Equip
+  const [equip, setEquip] = useState<boolean>(false);
+
+  const handleEquip = () => {
+    setEquip((prev) => !prev);
   };
 
   // animation variant
@@ -97,19 +121,28 @@ const MenMain = () => {
           </li>
 
           {/* Clothing */}
-          <li className="flex flex-row justify-between text-gray-500 ">
+          <li
+            onClick={handleCloth}
+            className="flex flex-row justify-between text-gray-500 "
+          >
             Clothing
             <LuChevronRight className="h-6" />
           </li>
 
           {/* Discover Sport */}
-          <li className="flex flex-row justify-between text-gray-500 ">
+          <li
+            onClick={handleSport}
+            className="flex flex-row justify-between text-gray-500 "
+          >
             Discover Sport
             <LuChevronRight className="h-6" />
           </li>
 
           {/* Accessories and Equipment */}
-          <li className="flex flex-row justify-between text-gray-500 ">
+          <li
+            onClick={handleEquip}
+            className="flex flex-row justify-between text-gray-500 "
+          >
             Accessories and Equipment
             <LuChevronRight className="h-6" />
           </li>
@@ -155,6 +188,48 @@ const MenMain = () => {
               exit="leave"
             >
               <Shoes />
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* open cloth */}
+        <AnimatePresence>
+          {cloth && (
+            <motion.div
+              variants={variant}
+              initial="hidden"
+              animate="visible"
+              exit="leave"
+            >
+              <Cloth />
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* open sport */}
+        <AnimatePresence>
+          {sport && (
+            <motion.div
+              variants={variant}
+              initial="hidden"
+              animate="visible"
+              exit="leave"
+            >
+              <Sport />
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* open equip */}
+        <AnimatePresence>
+          {equip && (
+            <motion.div
+              variants={variant}
+              initial="hidden"
+              animate="visible"
+              exit="leave"
+            >
+              <Equip />
             </motion.div>
           )}
         </AnimatePresence>
