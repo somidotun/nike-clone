@@ -9,6 +9,7 @@ import ButtonBlack from "@/app/props/buttonBlack";
 import { motion, AnimatePresence } from "motion/react";
 import NewsMain from "./newsFeatured/newsMain";
 import MenMain from "./men/menMain";
+import WomenMain from "./women/womenMain";
 
 const Menu = () => {
   // openNews
@@ -23,6 +24,13 @@ const Menu = () => {
 
   const handleOpenMen = () => {
     setOpenMen((prev) => !prev);
+  };
+
+  // open women
+  const [openWomen, setOpenWomen] = useState<boolean>(false);
+
+  const handleOpenWomen = () => {
+    setOpenWomen((prev) => !prev);
   };
 
   // animation variant
@@ -92,6 +100,7 @@ const Menu = () => {
 
           {/* women */}
           <li
+            onClick={handleOpenWomen}
             className="flex flex-row justify-between gap-1
            hover:text-gray-500"
           >
@@ -161,6 +170,20 @@ const Menu = () => {
               exit="leave"
             >
               <MenMain />
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* women */}
+        <AnimatePresence>
+          {openWomen && (
+            <motion.div
+              variants={variant}
+              initial="hidden"
+              animate="visible"
+              exit="leave"
+            >
+              <WomenMain />
             </motion.div>
           )}
         </AnimatePresence>
