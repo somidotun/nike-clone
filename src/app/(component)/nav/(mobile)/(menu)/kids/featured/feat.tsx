@@ -3,9 +3,9 @@
 import { AnimatePresence, motion } from "motion/react";
 import React, { useState } from "react";
 import { LuChevronLeft } from "react-icons/lu";
-import WomenMain from "../womenMain";
+import KidsMains from "../kidsMain";
 
-const Cloth = () => {
+const Feats = () => {
   // open news & featured
   const [open, setOpen] = useState<boolean>(false);
 
@@ -57,60 +57,30 @@ const Cloth = () => {
       >
         <div className="flex flex-row  text-xl" onClick={handleOpen}>
           <LuChevronLeft className=" h-6" />
-          <p>Women</p>
+          <p>Kids</p>
         </div>
 
-        <h1 className=" mt-5 text-2xl font-semibold">Clothing</h1>
+        <h1 className=" mt-5 text-2xl font-semibold">Featured</h1>
 
         <ul className="flex flex-col pl-6 gap-5">
-          {/* All Clothing */}
+          {/* New Releases */}
           <li className="flex flex-row justify-between text-gray-500 ">
-            All Clothing
+            New Releases
           </li>
 
-          {/* Hoodies and Sweatshirts */}
+          {/* Best Sellers */}
           <li className="flex flex-row justify-between text-gray-500 ">
-            Hoodies and Sweatshirts
+            Best Sellers
           </li>
 
-          {/* Jackets */}
+          {/* Teens */}
           <li className="flex flex-row justify-between text-gray-500 ">
-            Jackets
+            Teens
           </li>
 
-          {/* Trousers*/}
+          {/* EasyOn*/}
           <li className="flex flex-row justify-between text-gray-500 ">
-            Trousers
-          </li>
-
-          {/* Leggings */}
-          <li className="flex flex-row justify-between text-gray-500 ">
-            Leggings
-          </li>
-
-          {/* Matching Sets*/}
-          <li className="flex flex-row justify-between text-gray-500 ">
-            Matching Sets
-          </li>
-
-          {/* Tops and T-Shirts*/}
-          <li className="flex flex-row justify-between text-gray-500 ">
-            Tops and T-Shirts
-          </li>
-
-          {/* Shorts*/}
-          <li className="flex flex-row justify-between text-gray-500 ">
-            Shorts
-          </li>
-
-          {/* Sports Bras*/}
-          <li className="flex flex-row justify-between text-gray-500 ">
-            Sports Bras
-          </li>
-
-          {/* Skirts and Dresses*/}
-          <li className="flex flex-row justify-between text-gray-500 ">
-            Skirts and Dresses
+            EasyOn
           </li>
         </ul>
       </div>
@@ -125,7 +95,7 @@ const Cloth = () => {
               animate="visible"
               exit="leave"
             >
-              <WomenMain />
+              <KidsMains />
             </motion.div>
           )}
         </AnimatePresence>
@@ -134,4 +104,4 @@ const Cloth = () => {
   );
 };
 
-export default Cloth;
+export default Feats;
