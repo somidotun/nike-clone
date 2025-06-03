@@ -10,6 +10,7 @@ import { motion, AnimatePresence } from "motion/react";
 import NewsMain from "./newsFeatured/newsMain";
 import MenMain from "./men/menMain";
 import WomenMain from "./women/womenMain";
+import KidsMains from "./kids/kidsMain";
 
 const Menu = () => {
   // openNews
@@ -31,6 +32,13 @@ const Menu = () => {
 
   const handleOpenWomen = () => {
     setOpenWomen((prev) => !prev);
+  };
+
+  // open Kid
+  const [openKid, setOpenKid] = useState<boolean>(false);
+
+  const handleOpenKid = () => {
+    setOpenKid((prev) => !prev);
   };
 
   // animation variant
@@ -110,6 +118,7 @@ const Menu = () => {
 
           {/* kids */}
           <li
+            onClick={handleOpenKid}
             className="flex flex-row justify-between gap-1
            hover:text-gray-500"
           >
@@ -184,6 +193,20 @@ const Menu = () => {
               exit="leave"
             >
               <WomenMain />
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* kids */}
+        <AnimatePresence>
+          {openKid && (
+            <motion.div
+              variants={variant}
+              initial="hidden"
+              animate="visible"
+              exit="leave"
+            >
+              <KidsMains />
             </motion.div>
           )}
         </AnimatePresence>

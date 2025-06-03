@@ -3,7 +3,7 @@
 import { AnimatePresence, motion } from "motion/react";
 import React, { useState } from "react";
 import { LuChevronLeft } from "react-icons/lu";
-import WomenMain from "../womenMain";
+import KidsMains from "../kidsMain";
 
 const Cloth = () => {
   // open news & featured
@@ -57,7 +57,7 @@ const Cloth = () => {
       >
         <div className="flex flex-row  text-xl" onClick={handleOpen}>
           <LuChevronLeft className=" h-6" />
-          <p>Women</p>
+          <p>Kids</p>
         </div>
 
         <h1 className=" mt-5 text-2xl font-semibold">Clothing</h1>
@@ -80,17 +80,17 @@ const Cloth = () => {
 
           {/* Trousers*/}
           <li className="flex flex-row justify-between text-gray-500 ">
-            Trousers
+            Trousers and Leggings
           </li>
 
-          {/* Leggings */}
+          {/*Tracksuits */}
           <li className="flex flex-row justify-between text-gray-500 ">
-            Leggings
+            Tracksuits
           </li>
 
-          {/* Matching Sets*/}
+          {/* Sport Clothing*/}
           <li className="flex flex-row justify-between text-gray-500 ">
-            Matching Sets
+            Sport Clothing
           </li>
 
           {/* Tops and T-Shirts*/}
@@ -103,9 +103,9 @@ const Cloth = () => {
             Shorts
           </li>
 
-          {/* Sports Bras*/}
+          {/* Kits and Jerseys*/}
           <li className="flex flex-row justify-between text-gray-500 ">
-            Sports Bras
+            Kits and Jerseys
           </li>
 
           {/* Skirts and Dresses*/}
@@ -125,7 +125,7 @@ const Cloth = () => {
               animate="visible"
               exit="leave"
             >
-              <WomenMain />
+              <KidsMains />
             </motion.div>
           )}
         </AnimatePresence>
