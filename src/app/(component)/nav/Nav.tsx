@@ -8,7 +8,7 @@ import DesktopNav from "./(desktop)/topNav/nav";
 
 const Nav = () => {
   return (
-    <section>
+    <section className="z-[200]">
       <Media
         queries={{
           small: "(max-width: 599px)",
@@ -27,10 +27,10 @@ const Nav = () => {
             {/* tablet and desktop nav */}
             {matches.large && (
               <>
-                <div className="bg-[#F5F5F5] py-2 px-8">
+                <div className="bg-[#F5F5F5] text-black py-2 px-8">
                   <DesktopNav />
                 </div>
-                <div className="bg-[#Ffffff] py-1 px-6">
+                <div className="bg-[#Ffffff] py-1 px-6 text-black">
                   <SecondNav />
                 </div>
               </>

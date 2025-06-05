@@ -5,6 +5,7 @@ import Link from "next/link";
 import { FaSearch } from "react-icons/fa";
 import { FaCartPlus } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
+import { usePathname } from "next/navigation";
 type Props = {
   title: string;
   link: string;
@@ -37,11 +38,15 @@ const SecondNav = () => {
       id: 0,
     },
   ];
-
+  const pathname = usePathname();
   const profie = navigations.map((navigation) => (
     <div key={navigation.id}>
       <Link
-        className="hover:border-b-black pb-3 hover:border-b-2"
+        className={` ${
+          pathname === navigation.link
+            ? "text-red-500"
+            : "hover:border-b-black pb-3 hover:border-b-2"
+        }`}
         href={navigation.link}
       >
         {navigation.title}

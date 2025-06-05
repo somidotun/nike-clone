@@ -13,7 +13,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 
 const MobileNav = () => {
   // open menu
-  const [open, setOpen] = useState<boolean>(true);
+  const [open, setOpen] = useState<boolean>(false);
 
   const handleOpen = () => {
     setOpen((prev) => !prev);
@@ -50,7 +50,7 @@ const MobileNav = () => {
   };
   return (
     <section className="p-3">
-      <nav className="flex flex-row justify-between relative">
+      <nav className="flex flex-row justify-between ">
         {/* jordon logo */}
         <Link href="/">
           <p>
@@ -79,7 +79,7 @@ const MobileNav = () => {
             <FaCartPlus className="h-10 text-2xl" />
           </p>
 
-          <div onClick={handleOpen} className="z-50">
+          <div onClick={handleOpen} className="z-[150]">
             {open ? (
               <p>
                 <GrClose className="h-10 text-2xl" />
