@@ -4,8 +4,8 @@ import Image from "next/image";
 import React, { useState } from "react";
 import icons8 from "@/app/images/icons8.png";
 import { LuChevronRight } from "react-icons/lu";
-import Buttons from "@/app/props/buttonWhite";
-import ButtonBlack from "@/app/props/buttonBlack";
+import Buttons from "@/app/props/buttons/buttonWhite";
+import ButtonBlack from "@/app/props/buttons/buttonBlack";
 import { motion, AnimatePresence } from "motion/react";
 import NewsMain from "./newsFeatured/newsMain";
 import MenMain from "./men/menMain";
@@ -73,7 +73,7 @@ const Menu = () => {
 
   return (
     <section
-      className="fixed top-0 bottom-0  
+      className="fixed top-0 bottom-0  z-[100]
      w-[100%] right-0 flex flex-row"
     >
       <div className="bg-[#0000002a] w-[25%]"></div>

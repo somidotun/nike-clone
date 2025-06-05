@@ -17,8 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-      >
+      <body className="relative">
         {/* navgation bar */}
 
         <header>
@@ -26,7 +25,7 @@ export default function RootLayout({
         </header>
 
         {/* body */}
-        <div className="bg-slate-500">{children}</div>
+        <div className="bg-slate-500 ">{children}</div>
         {/*footer  */}
         <footer>footer</footer>
       </body>
