@@ -29,11 +29,13 @@ import { Autoplay } from "swiper/modules";
 import { Suspense } from "react";
 import Image from "next/image";
 import "./style.css";
+import Text from "./text";
 
 const Background = () => {
   return (
-    <section className="w-full">
+    <section className="w-full relative">
       <Swiper
+        className="mySwiper"
         slidesPerView={1}
         loop={true}
         spaceBetween={30}
@@ -46,7 +48,6 @@ const Background = () => {
           clickable: true,
         }}
         modules={[Autoplay]}
-        className="mySwiper"
       >
         {/* first slide */}
         <SwiperSlide>
@@ -184,15 +185,14 @@ const Background = () => {
             <Image src={fiftheen} alt="nike on the ground" priority />
           </Suspense>
         </SwiperSlide>
-        {/* <SwiperSlide>Slide 2</SwiperSlide> */}
-        {/* <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide> */}
       </Swiper>
+
+      <div
+        className="absolute bottom-0 
+      w-full z-50 left-0 "
+      >
+        <Text />
+      </div>
     </section>
   );
 };

@@ -5,6 +5,8 @@ import React, { Fragment } from "react";
 import Media from "react-media";
 import MobileNav from "./(mobile)/mobileNav";
 import DesktopNav from "./(desktop)/topNav/nav";
+import OpenToggle from "./(desktop)/openNav/openToggleNews";
+import OpenToggleMen from "./(desktop)/openNav/openMen";
 
 const Nav = () => {
   return (
@@ -30,8 +32,16 @@ const Nav = () => {
                 <div className="bg-[#F5F5F5] text-black py-2 px-8">
                   <DesktopNav />
                 </div>
-                <div className="bg-[#Ffffff] py-1 px-6 text-black">
+                <div className="bg-[#Ffffff] relative  text-black">
                   <SecondNav />
+
+                  <div>
+                    {/* open news and featured */}
+                    <OpenToggle />
+
+                    {/* open men */}
+                    <OpenToggleMen />
+                  </div>
                 </div>
               </>
             )}

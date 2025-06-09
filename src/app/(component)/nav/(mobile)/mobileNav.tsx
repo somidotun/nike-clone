@@ -8,7 +8,7 @@ import one from "../../../images/one.jpg";
 import { GrClose } from "react-icons/gr";
 import Menu from "./(menu)/menu";
 import { MdOutlinePersonOutline } from "react-icons/md";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 const MobileNav = () => {
@@ -23,7 +23,7 @@ const MobileNav = () => {
   const variant = {
     // initial
     hidden: {
-      opacity: [0, 0.2, 0.4, 0.6, 0.8, 1],
+      opacity: 0,
       x: "100vw",
       transition: {
         duration: 0.6,
@@ -34,15 +34,6 @@ const MobileNav = () => {
     visible: {
       opacity: 1,
       x: 0,
-      transition: {
-        duration: 0.6,
-      },
-    },
-
-    // exit
-    leave: {
-      opacity: [1, 0.8, 0.6, 0.4, 0.2, 0],
-      x: "100vw",
       transition: {
         duration: 0.6,
       },
@@ -93,18 +84,13 @@ const MobileNav = () => {
         </div>
       </nav>
 
-      <AnimatePresence>
+      <div>
         {open && (
-          <motion.div
-            variants={variant}
-            initial="hidden"
-            animate="visible"
-            exit="leave"
-          >
+          <motion.div variants={variant} initial="hidden" animate="visible">
             <Menu />
           </motion.div>
         )}
-      </AnimatePresence>
+      </div>
     </section>
   );
 };
