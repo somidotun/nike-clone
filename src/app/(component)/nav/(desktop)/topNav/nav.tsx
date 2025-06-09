@@ -34,11 +34,10 @@ const DesktopNav = () => {
         <p className="text-sm">|</p>
 
         {/* HELP */}
-        <Link
+        <div
           onMouseEnter={() => setOpenHelp(true)}
           onMouseLeave={() => setOpenHelp(false)}
           className="hover:text-gray-500 relative text-sm"
-          href="/findStore"
         >
           <p>Help</p>
 
@@ -48,7 +47,7 @@ const DesktopNav = () => {
               <Help />
             </div>
           )}
-        </Link>
+        </div>
 
         <p className="text-sm">|</p>
 
