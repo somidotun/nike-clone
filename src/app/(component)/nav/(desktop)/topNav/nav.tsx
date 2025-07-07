@@ -5,6 +5,7 @@ import Image from "next/image";
 import icons8 from "../../../../images/icons8.png";
 import Link from "next/link";
 import Help from "./help";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 
 const DesktopNav = () => {
   // open help
@@ -37,7 +38,7 @@ const DesktopNav = () => {
         <div
           onMouseEnter={() => setOpenHelp(true)}
           onMouseLeave={() => setOpenHelp(false)}
-          className="hover:text-gray-500 relative text-sm"
+          className="hover:text-gray-500 hover:cursor-pointer relative text-sm"
         >
           <p>Help</p>
 
@@ -58,10 +59,22 @@ const DesktopNav = () => {
 
         <p className="text-sm">|</p>
 
-        {/* find a store */}
-        <Link className="hover:text-gray-500  text-sm" href="/findStore">
-          <p>Sign up</p>
-        </Link>
+        {/*sign in */}
+        <SignedOut>
+          <div className="hover:text-gray-500  text-sm">
+            <SignInButton mode="modal" />
+          </div>
+        </SignedOut>
+
+        {/*sign out */}
+        <SignedIn>
+          <div
+            className="hover:text-gray-500 flex
+           flex-row gap-4 h-1 w-1 text-sm"
+          >
+            <UserButton />
+          </div>
+        </SignedIn>
       </div>
     </section>
   );

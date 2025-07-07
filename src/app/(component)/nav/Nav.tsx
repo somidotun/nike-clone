@@ -1,12 +1,14 @@
 "use client";
 
 import SecondNav from "./(desktop)/secondNav/secondNav";
-import React, { Fragment } from "react";
+import React, { Fragment, Suspense } from "react";
 import Media from "react-media";
 import MobileNav from "./(mobile)/mobileNav";
 import DesktopNav from "./(desktop)/topNav/nav";
 import OpenToggle from "./(desktop)/openNav/openToggleNews";
 import OpenToggleMen from "./(desktop)/openNav/openMen";
+import OpenToggleWomen from "./(desktop)/openNav/openWomen";
+import OpenToggleKids from "./(desktop)/openNav/openKid";
 
 const Nav = () => {
   return (
@@ -20,11 +22,13 @@ const Nav = () => {
         {(matches) => (
           <Fragment>
             {/* mobile nav */}
-            {matches.small && (
-              <>
-                <MobileNav />
-              </>
-            )}
+            <Suspense fallback={<p>Loading..</p>}>
+              {matches.small && (
+                <>
+                  <MobileNav />
+                </>
+              )}
+            </Suspense>
 
             {/* tablet and desktop nav */}
             {matches.large && (
@@ -41,6 +45,12 @@ const Nav = () => {
 
                     {/* open men */}
                     <OpenToggleMen />
+
+                    {/* open Women */}
+                    <OpenToggleWomen />
+
+                    {/* open Kid */}
+                    <OpenToggleKids />
                   </div>
                 </div>
               </>

@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import type { Metadata } from "next";
 import "./globals.css";
 import Nav from "./(component)/nav/Nav";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,21 +28,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`h-screen relative ${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {/* navgation bar */}
+    <ClerkProvider>
+      <html lang="en">
+        <body
+          className={`h-screen relative ${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          {/* navgation bar */}
 
-        <header>
-          <Nav />
-        </header>
+          <header>
+            <Nav />
+          </header>
 
-        {/* body */}
-        <div className={`${geistMono}`}>{children}</div>
-        {/*footer  */}
-        <footer>footer</footer>
-      </body>
-    </html>
+          {/* body */}
+          <div className={`${geistMono}`}>{children}</div>
+          {/*footer  */}
+          <footer>footer</footer>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
