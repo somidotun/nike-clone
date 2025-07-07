@@ -7,10 +7,14 @@ import { FaCartPlus } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
 import { useToggleStore } from "@/app/store/useToggleStore";
 import { useToggleMen } from "@/app/store/useToggleMen";
+import { useToggleWomen } from "@/app/store/useToggleWomen";
+import { useToggleKids } from "@/app/store/usetoggleKids";
 
 const SecondNav = () => {
   const { isToggled, setToggled } = useToggleStore();
   const { isToggledMen, setToggledMen } = useToggleMen();
+  const { isToggledWomen, setToggledWomen } = useToggleWomen();
+  const { isToggledKids, setToggledKids } = useToggleKids();
 
   const handleNews = () => {
     if (isToggled) {
@@ -20,6 +24,8 @@ const SecondNav = () => {
       // If not active, open it and close Men
       setToggled(true);
       setToggledMen(false);
+      setToggledWomen(false);
+      setToggledKids(false);
     }
   };
 
@@ -30,6 +36,35 @@ const SecondNav = () => {
     } else {
       // If not active, open it and close New & Featured
       setToggledMen(true);
+      setToggledWomen(false);
+      setToggled(false);
+      setToggledKids(false);
+    }
+  };
+
+  const handleWomen = () => {
+    if (isToggledWomen) {
+      // If already active, close it
+      setToggledWomen(false);
+    } else {
+      // If not active, open it and close New & Featured
+      setToggledWomen(true);
+      setToggledMen(false);
+      setToggled(false);
+
+      setToggledKids(false);
+    }
+  };
+
+  const handleKid = () => {
+    if (isToggledKids) {
+      // If already active, close it
+      setToggledKids(false);
+    } else {
+      // If not active, open it and close New & Featured
+      setToggledKids(true);
+      setToggledWomen(false);
+      setToggledMen(false);
       setToggled(false);
     }
   };
@@ -46,7 +81,7 @@ const SecondNav = () => {
         className={` ${
           isToggled ? "border-b-black border-b-Black pb-3 border-b-2" : ""
         }
-           hover:border-b-black
+           hover:border-b-gray-400
          hover:cursor-pointer pb-3 hover:border-b-2`}
         onClick={handleNews}
       >
@@ -58,7 +93,7 @@ const SecondNav = () => {
         className={` ${
           isToggledMen ? "border-b-black border-b-Black pb-3 border-b-2" : ""
         }
-           hover:border-b-black
+           hover:border-b-gray-400
          hover:cursor-pointer pb-3 hover:border-b-2`}
         onClick={handleMen}
       >
@@ -66,12 +101,26 @@ const SecondNav = () => {
       </h1>
 
       {/* Women */}
-      <h1 className="hover:border-b-black hover:cursor-pointer pb-3 hover:border-b-2">
+      <h1
+        className={` ${
+          isToggledWomen ? "border-b-black border-b-Black pb-3 border-b-2" : ""
+        }
+           hover:border-b-gray-400
+         hover:cursor-pointer pb-3 hover:border-b-2`}
+        onClick={handleWomen}
+      >
         Women
       </h1>
 
       {/* Kids */}
-      <h1 className="hover:border-b-black hover:cursor-pointer pb-3 hover:border-b-2">
+      <h1
+        className={` ${
+          isToggledKids ? "border-b-black border-b-Black pb-3 border-b-2" : ""
+        }
+           hover:border-b-gray-400
+         hover:cursor-pointer pb-3 hover:border-b-2`}
+        onClick={handleKid}
+      >
         Kids
       </h1>
     </div>

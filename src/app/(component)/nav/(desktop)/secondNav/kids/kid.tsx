@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const OpenMen = () => {
+const Kid = () => {
   // animation variant
   const variant = {
     // initial
@@ -56,61 +56,63 @@ const OpenMen = () => {
         variants={variant1}
         initial="hidden"
         animate="visible"
-        className="    px-32 py-5 text-sm 
+        className="    px-32 py-5 text-sm
             justify-between flex flex-row text-gray-500"
       >
         {/* featured */}
-        <ul className="flex flex-col gap-2 w-[27%]">
+        <ul className="flex flex-col gap-2">
           <li className="text-black">Featured</li>
           <li className="hover:text-black cursor-pointer">New Releases</li>
-          <li className="hover:text-black cursor-pointer">Best sellers</li>
-          <li className="hover:text-black cursor-pointer">Y2K Sneaker</li>
+          <li className="hover:text-black cursor-pointer">Best Sellers</li>
+          <li className="hover:text-black cursor-pointer">Teens</li>
+          <li className="hover:text-black cursor-pointer">EasyOn</li>
         </ul>
-
         {/* shoes */}
-        <ul className="flex flex-col gap-2 w-[27%]">
+        <ul className="flex flex-col gap-2">
           <li className="text-black">Shoes</li>
-          <li className="hover:text-black cursor-pointer">All shoes</li>
+          <li className="hover:text-black cursor-pointer">All Shoes</li>
           <li className="hover:text-black cursor-pointer">Lifestyle</li>
           <li className="hover:text-black cursor-pointer">Jordan</li>
-          <li className="hover:text-black cursor-pointer">Running</li>
           <li className="hover:text-black cursor-pointer">Football</li>
+          <li className="hover:text-black cursor-pointer">Running</li>
           <li className="hover:text-black cursor-pointer">Basketball</li>
-          <li className="hover:text-black cursor-pointer">Training and Gym</li>
-          <li className="hover:text-black cursor-pointer">Skateboarding</li>
-          <li className="hover:text-black cursor-pointer">Nike By You</li>
         </ul>
-
         {/* Clothing*/}
-        <ul className="flex flex-col gap-2 w-[27%]">
+        <ul className="flex flex-col gap-2">
           <li className="text-black">Clothing </li>
-          <li className="hover:text-black cursor-pointer">All clothing</li>
+          <li className="hover:text-black cursor-pointer">All Clothing</li>
           <li className="hover:text-black cursor-pointer">
             Hoodies and Sweatshirts
           </li>
           <li className="hover:text-black cursor-pointer">Jackets</li>
           <li className="hover:text-black cursor-pointer">
-            Trousers and Tights
+            Trousers and Leggings
           </li>
           <li className="hover:text-black cursor-pointer">Tracksuits</li>
+          <li className="hover:text-black cursor-pointer">Sport Clothing</li>
           <li className="hover:text-black cursor-pointer">Tops and T-shirts</li>
           <li className="hover:text-black cursor-pointer">Shorts</li>
           <li className="hover:text-black cursor-pointer">Kits and jerseys</li>
+          <li className="hover:text-black cursor-pointer">
+            Skirts and Dresses
+          </li>
         </ul>
-
-        {/* Discover Sport */}
-        <ul className="flex flex-col gap-2 w-[27%]">
-          <li className="text-black">Discover Sport</li>
-          <li className="hover:text-black cursor-pointer">Running</li>
-          <li className="hover:text-black cursor-pointer">Football</li>
-          <li className="hover:text-black cursor-pointer">Basketball </li>
-          <li className="hover:text-black cursor-pointer">Training & Gym</li>
-          <li className="hover:text-black cursor-pointer">Tennis</li>
-          <li className="hover:text-black cursor-pointer">Golf</li>
+        {/* Kids by age */}
+        <ul className="flex flex-col gap-2">
+          <li className="text-black">Kids by age</li>
+          <li className="hover:text-black cursor-pointer">
+            Older Kids (7-15years)
+          </li>
+          <li className="hover:text-black cursor-pointer">
+            Younger Kids (3-7years)
+          </li>
+          <li className="hover:text-black cursor-pointer">
+            Baby & Toddler (0-3years)
+          </li>
         </ul>
 
         {/* Accessories and Equipment */}
-        <ul className="flex flex-col gap-2 w-[16%]">
+        <ul className="flex flex-col gap-2">
           <li className="text-black">Accessories and Equipment</li>
           <li className="hover:text-black cursor-pointer">
             All Accessories and Equipment
@@ -126,4 +128,4 @@ const OpenMen = () => {
   );
 };
 
-export default OpenMen;
+export default Kid;
