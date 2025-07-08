@@ -10,6 +10,7 @@ import Menu from "./(menu)/menu";
 import { MdOutlinePersonOutline } from "react-icons/md";
 import { motion } from "framer-motion";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 
 const MobileNav = () => {
   // open menu
@@ -55,31 +56,49 @@ const MobileNav = () => {
           </p>
         </Link>
 
-        {/* icons */}
+        <div className="flex w-[33%] flex-row justify-between">
+          {/* icons */}
+          <div className="flex flex-row gap-3">
+            {/*sign in */}
+            <SignedOut>
+              <div className="hover:text-gray-500 h-10 text-sm">
+                <SignInButton mode="modal">
+                  <MdOutlinePersonOutline className="h-10 font-bold text-2xl" />
+                </SignInButton>
+              </div>
+            </SignedOut>
 
-        <div className="flex flex-row gap-3">
-          <p>
-            <FaSearch className="h-10 text-2xl" />
-          </p>
+            {/*sign out */}
+            <SignedIn>
+              <div
+                className="hover:text-gray-500 flex
+           flex-row gap-4  w-1 text-sm h-10"
+              >
+                <UserButton />
+              </div>
+            </SignedIn>
+          </div>
 
-          <p>
-            <MdOutlinePersonOutline className="h-10 text-2xl" />
-          </p>
+          <div className="flex flex-row gap-4">
+            <p>
+              <FaSearch className="h-10 text-2xl" />
+            </p>
 
-          <p>
-            <FaCartPlus className="h-10 text-2xl" />
-          </p>
+            <p>
+              <FaCartPlus className="h-10 text-2xl" />
+            </p>
 
-          <div onClick={handleOpen} className="z-[150]">
-            {open ? (
-              <p>
-                <GrClose className="h-10 text-2xl" />
-              </p>
-            ) : (
-              <p>
-                <RxHamburgerMenu className="h-10 text-2xl" />
-              </p>
-            )}
+            <div onClick={handleOpen} className="z-[150]">
+              {open ? (
+                <p>
+                  <GrClose className="h-10 text-2xl" />
+                </p>
+              ) : (
+                <p>
+                  <RxHamburgerMenu className="h-10 text-2xl" />
+                </p>
+              )}
+            </div>
           </div>
         </div>
       </nav>
