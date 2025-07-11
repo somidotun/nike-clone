@@ -1,6 +1,6 @@
 type Props = {
   style?: string;
-  text: string;
+  text: string | undefined;
 };
 
 const ButtonWhite = ({ style, text }: Props) => {

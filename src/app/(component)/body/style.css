@@ -14,7 +14,7 @@
 }
 
 .div2:hover {
-  animation: fade 1s 5ms infinite alternate both;
+  animation: fade 1s 40ms infinite alternate both;
 }
 
 @keyframes fade {
