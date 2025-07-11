@@ -56,7 +56,7 @@ const MobileNav = () => {
           </p>
         </Link>
 
-        <div className="flex w-[33%] flex-row justify-between">
+        <div className="flex w-36 flex-row justify-between">
           {/* icons */}
           <div className="flex flex-row gap-3">
             {/*sign in */}

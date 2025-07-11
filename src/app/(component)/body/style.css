@@ -1,0 +1,34 @@
+.parent {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.div2 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.div2:hover {
+  animation: fade 1s 5ms infinite alternate both;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0s;
+  }
+  100% {
+    opacity: 0;
+  }
+}
