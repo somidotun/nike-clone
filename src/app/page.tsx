@@ -1,3 +1,4 @@
+import Body from "./(component)/body/body";
 import Herro from "./(component)/herro/herro";
 
 export default function Home() {
@@ -5,6 +6,9 @@ export default function Home() {
     <div>
       {/* herro section */}
       <Herro />
+
+      {/* body section */}
+      <Body />
     </div>
   );
 }

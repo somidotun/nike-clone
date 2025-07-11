@@ -4,13 +4,13 @@ import Image from "next/image";
 import React, { useState } from "react";
 import icons8 from "@/app/images/icons8.png";
 import { LuChevronRight } from "react-icons/lu";
-import Buttons from "@/app/props/buttons/buttonWhite";
 import ButtonBlack from "@/app/props/buttons/buttonBlack";
 import { motion, AnimatePresence } from "motion/react";
 import NewsMain from "./newsFeatured/newsMain";
 import MenMain from "./men/menMain";
 import WomenMain from "./women/womenMain";
 import KidsMains from "./kids/kidsMain";
+import Link from "next/link";
 
 const Menu = () => {
   // openNews
@@ -128,7 +128,7 @@ const Menu = () => {
         </ul>
 
         {/* jordan */}
-        <div className="flex flex-row gap-3">
+        <Link href="/jordanLogo" className="flex flex-row gap-3">
           <Image
             src={icons8}
             alt=" jordans logo"
@@ -138,7 +138,7 @@ const Menu = () => {
           />
 
           <p>Jordans</p>
-        </div>
+        </Link>
 
         {/* text */}
         <div className="w-[90%] flex flex-col gap-10">
@@ -148,8 +148,7 @@ const Menu = () => {
           </p>
 
           <div className="flex flex-row gap-7">
-            <ButtonBlack text=" Join Us" />
-            <Buttons style="" text="Sign in" />
+            <ButtonBlack text=" Join Us" style="w-full" />
           </div>
         </div>
       </div>
