@@ -30,7 +30,7 @@ const TabletBody = () => {
 
         <Swiper
           slidesPerView={2}
-          loop={true}
+          loop={false}
           spaceBetween={10}
           centeredSlides={true}
           pagination={{
