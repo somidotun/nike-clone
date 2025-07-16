@@ -30,7 +30,7 @@ const MobileBody = () => {
 
         <Swiper
           slidesPerView={1}
-          loop={true}
+          loop={false}
           spaceBetween={10}
           centeredSlides={true}
           pagination={{
