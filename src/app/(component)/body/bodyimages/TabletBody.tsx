@@ -30,7 +30,7 @@ const TabletBody = () => {
 
         <Swiper
           slidesPerView={2}
-          loop={false}
+          loop={true}
           spaceBetween={10}
           centeredSlides={true}
           pagination={{
@@ -41,13 +41,13 @@ const TabletBody = () => {
         >
           {/* first one */}
           <SwiperSlide>
-            <div className="relative  w-full">
+            <div className="relative w-full h-full">
               {/* background image */}
 
-              <div>
+              <div className="h-[200px]">
                 <Featured
                   altText="sport shoe for woman"
-                  imageStyle="h-[10.35rem] w-full"
+                  imageStyle="h-full w-full object-cover"
                   image={One}
                 />
               </div>
@@ -55,7 +55,7 @@ const TabletBody = () => {
               {/* text */}
               <div
                 className="absolute bottom-2 py-4  text-white
-                 w-full bg-[#07070784] h-[6.5rem]
+                 w-full bg-[#07070784] h-[100px]
                  flex flex-col gap-1"
               >
                 <p>sport shoe for woman</p>
@@ -67,13 +67,13 @@ const TabletBody = () => {
 
           {/* second one */}
           <SwiperSlide>
-            <div className="relative  w-full">
+            <div className="relative w-full h-full">
               {/* background image */}
 
-              <div>
+              <div className="h-[200px]">
                 <Featured
                   altText="sport woman in the gym"
-                  imageStyle="h-[26.35rem] w-[100%]"
+                  imageStyle="h-full w-full object-cover"
                   image={two}
                 />
               </div>
@@ -81,7 +81,7 @@ const TabletBody = () => {
               {/* text */}
               <div
                 className="absolute bottom-2 py-4  text-white
-                 w-full bg-[#07070784] h-[6.5rem]
+                 w-full bg-[#07070784] h-[100px]
                  flex flex-col gap-1"
               >
                 <p> Gym wear for female</p>
@@ -93,14 +93,14 @@ const TabletBody = () => {
 
           {/* third one */}
           <SwiperSlide>
-            <div className=" relative">
+            <div className="relative w-full h-full">
               {/* background image */}
 
               {/* unhovered */}
-              <div className=" w-full">
+              <div className="h-[200px]">
                 <Featured
                   altText="Nike air for female"
-                  imageStyle="w-[50%] h-[26.35rem]"
+                  imageStyle="h-full w-full object-cover"
                   image={three}
                 />
               </div>
@@ -108,7 +108,7 @@ const TabletBody = () => {
               {/* text */}
               <div
                 className="absolute bottom-2 py-4  text-white
-                 w-full bg-[#07070784] h-[6.5rem]
+                 w-full bg-[#07070784] h-[100px]
                  flex flex-col gap-1"
               >
                 <p>Nike Air</p>
@@ -120,21 +120,21 @@ const TabletBody = () => {
 
           {/* fouth one */}
           <SwiperSlide>
-            <div className="relative">
+            <div className="relative w-full h-full">
               {/* background image */}
 
-              <div className="w-full">
+              <div className="h-[200px]">
                 <Featured
                   altText="a girl in nike gym wear"
                   image={ten}
-                  imageStyle="w-[50%] h-[26.35rem]"
+                  imageStyle="h-full w-full object-cover"
                 />
               </div>
 
               {/* text */}
               <div
                 className="absolute bottom-2 py-4  text-white
-                 w-full bg-[#07070784] h-[6.5rem]
+                 w-full bg-[#07070784] h-[100px]
                  flex flex-col gap-1"
               >
                 <p>Nike gym wear for Female</p>
@@ -146,13 +146,12 @@ const TabletBody = () => {
 
           {/* fifth one */}
           <SwiperSlide>
-            <div className="relative">
+            <div className="relative w-full h-full">
               {/* unhovered */}
-              <div className="div1 w-full">
+              <div className="h-[200px]">
                 <Featured
                   altText="jacket"
-                  imageStyle="w-[50%]
-                 h-[26.35rem]"
+                  imageStyle="h-full w-full object-cover"
                   image={five}
                 />
               </div>
@@ -160,7 +159,7 @@ const TabletBody = () => {
               {/* text */}
               <div
                 className="absolute bottom-2 py-4  text-white
-                 w-full bg-[#07070784] h-[6.5rem]
+                 w-full bg-[#07070784] h-[100px]
                  flex flex-col gap-1"
               >
                 <p>Jackets for male</p>
@@ -172,20 +171,19 @@ const TabletBody = () => {
 
           {/* six one */}
           <SwiperSlide>
-            <div className="relative">
+            <div className="relative w-full h-full">
               {/* hovered */}
-              <div className="w-full">
+              <div className="h-[200px]">
                 <Featured
                   altText="shoe"
                   image={six}
-                  imageStyle="w-[50%]  
-                 h-[26.35rem]"
+                  imageStyle="h-full w-full object-cover"
                 />
               </div>
               {/* text */}
               <div
                 className="absolute bottom-2 py-4  text-white
-                 w-full bg-[#07070784] h-[6.5rem]
+                 w-full bg-[#07070784] h-[100px]
                  flex flex-col gap-1"
               >
                 <p>Nike shoe for male</p>
@@ -197,21 +195,20 @@ const TabletBody = () => {
 
           {/* seventh one */}
           <SwiperSlide>
-            <div className="relative ">
+            <div className="relative w-full h-full">
               {/* hovered */}
-              <div>
+              <div className="h-[200px]">
                 <Featured
                   altText="shoe on bed"
                   image={seven}
-                  imageStyle="w-[50%] 
-                 h-[26.35rem]"
+                  imageStyle="h-full w-full object-cover"
                 />
               </div>
 
               {/* text */}
               <div
                 className="absolute bottom-2 py-4  text-white
-                 w-full bg-[#07070784] h-[6.5rem]
+                 w-full bg-[#07070784]  h-[100px]
                  flex flex-col gap-1"
               >
                 <p>Nike shoe for male</p>
@@ -221,14 +218,14 @@ const TabletBody = () => {
             </div>
           </SwiperSlide>
 
+          {/* eight one */}
           <SwiperSlide>
-            <div className="relative">
+            <div className="relative w-full h-full">
               {/* unhovered */}
-              <div>
+              <div className="h-[200px]">
                 <Featured
                   altText=" nike fear of God"
-                  imageStyle="w-[50%] 
-                 h-[26.35rem]"
+                  imageStyle="h-full w-full object-cover"
                   image={eight}
                 />
               </div>
@@ -236,7 +233,7 @@ const TabletBody = () => {
               {/* text */}
               <div
                 className="absolute bottom-2 py-4  text-white
-                 w-full bg-[#07070784] h-[6.5rem]
+                 w-full bg-[#07070784] h-[100px]
                  flex flex-col gap-1"
               >
                 <p>fear of God</p>
@@ -247,7 +244,6 @@ const TabletBody = () => {
           </SwiperSlide>
         </Swiper>
       </>
-      <div>{/* fourth one */}</div>
     </div>
   );
 };

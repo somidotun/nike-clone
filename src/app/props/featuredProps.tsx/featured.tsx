@@ -16,7 +16,7 @@ const Featured = ({ style, imageStyle, image, altText }: Props) => {
           className={` ${imageStyle} w-full`}
           src={image}
           alt={altText}
-          priority
+          priority={false}
         />
       </div>
     </div>

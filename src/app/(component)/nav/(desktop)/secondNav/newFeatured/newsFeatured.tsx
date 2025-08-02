@@ -56,7 +56,7 @@ const NewsFeatured = () => {
         variants={variant1}
         initial="hidden"
         animate="visible"
-        className="    px-32 py-5 text-sm
+        className="   px-16 lg:px-32 py-5 text-sm
             justify-between flex flex-row text-gray-500"
       >
         {/* featured */}

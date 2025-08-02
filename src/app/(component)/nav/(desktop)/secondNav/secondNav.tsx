@@ -9,12 +9,17 @@ import { useToggleStore } from "@/app/store/useToggleStore";
 import { useToggleMen } from "@/app/store/useToggleMen";
 import { useToggleWomen } from "@/app/store/useToggleWomen";
 import { useToggleKids } from "@/app/store/usetoggleKids";
+import Cart from "@/app/(component)/body/price/priceProp.tsx/cart";
+import { useCartStore } from "@/app/store/cartStore";
+import { useToggleCart } from "@/app/store/cartOpen";
 
 const SecondNav = () => {
   const { isToggled, setToggled } = useToggleStore();
   const { isToggledMen, setToggledMen } = useToggleMen();
   const { isToggledWomen, setToggledWomen } = useToggleWomen();
   const { isToggledKids, setToggledKids } = useToggleKids();
+
+  const { getTotalItems } = useCartStore();
 
   const handleNews = () => {
     if (isToggled) {
@@ -26,6 +31,7 @@ const SecondNav = () => {
       setToggledMen(false);
       setToggledWomen(false);
       setToggledKids(false);
+      setToggledCart(false);
     }
   };
 
@@ -39,6 +45,7 @@ const SecondNav = () => {
       setToggledWomen(false);
       setToggled(false);
       setToggledKids(false);
+      setToggledCart(false);
     }
   };
 
@@ -52,6 +59,7 @@ const SecondNav = () => {
       setToggledMen(false);
       setToggled(false);
 
+      setToggledCart(false);
       setToggledKids(false);
     }
   };
@@ -61,8 +69,25 @@ const SecondNav = () => {
       // If already active, close it
       setToggledKids(false);
     } else {
-      // If not active, open it and close New & Featured
+      // If not active, open it and close kid
       setToggledKids(true);
+      setToggledWomen(false);
+      setToggledMen(false);
+      setToggled(false);
+      setToggledCart(false);
+    }
+  };
+
+  const { setToggledCart, isToggledCart } = useToggleCart();
+
+  const handleCart = () => {
+    if (isToggledCart) {
+      // If already active, close it
+      setToggledCart(false);
+    } else {
+      // If not active, open it and close CART
+      setToggledCart(true);
+      setToggledKids(false);
       setToggledWomen(false);
       setToggledMen(false);
       setToggled(false);
@@ -81,7 +106,7 @@ const SecondNav = () => {
         className={` ${
           isToggled ? "border-b-black border-b-Black pb-3 border-b-2" : ""
         }
-           hover:border-b-gray-400
+           hover:border-b-gray-400 
          hover:cursor-pointer pb-3 hover:border-b-2`}
         onClick={handleNews}
       >
@@ -126,10 +151,11 @@ const SecondNav = () => {
     </div>
   );
 
+  // open cart
   // get the state and action from store
   return (
     <section>
-      <div className="flex flex-row justify-between py-1  px-6">
+      <div className="flex flex-row justify-between py-1  px-6 relative">
         {/* jordon logo */}
         <Link href="/">
           <p>
@@ -157,11 +183,27 @@ const SecondNav = () => {
             <CiHeart className="h-10" />
           </p>
 
-          <p>
+          <p className="relative w-6 hover:cursor-pointer" onClick={handleCart}>
             <FaCartPlus className="h-10" />
+
+            {getTotalItems() !== 0 && (
+              <p
+                className="h-5 w-5 bg-orange-400 absolute bottom-0
+             rounded-full right-0 text-sm pl-1"
+              >
+                {getTotalItems()}
+              </p>
+            )}
           </p>
         </div>
       </div>
+
+      {/* cart */}
+      {isToggledCart && (
+        <div>
+          <Cart />
+        </div>
+      )}
     </section>
   );
 };

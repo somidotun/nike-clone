@@ -56,11 +56,11 @@ const Kid = () => {
         variants={variant1}
         initial="hidden"
         animate="visible"
-        className="    px-32 py-5 text-sm
+        className="    px-12 lg:px-32  py-5 text-sm
             justify-between flex flex-row text-gray-500"
       >
         {/* featured */}
-        <ul className="flex flex-col gap-2">
+        <ul className="flex flex-col gap-2 w-[17%]">
           <li className="text-black">Featured</li>
           <li className="hover:text-black cursor-pointer">New Releases</li>
           <li className="hover:text-black cursor-pointer">Best Sellers</li>
@@ -68,7 +68,7 @@ const Kid = () => {
           <li className="hover:text-black cursor-pointer">EasyOn</li>
         </ul>
         {/* shoes */}
-        <ul className="flex flex-col gap-2">
+        <ul className="flex flex-col gap-2  w-[17%]">
           <li className="text-black">Shoes</li>
           <li className="hover:text-black cursor-pointer">All Shoes</li>
           <li className="hover:text-black cursor-pointer">Lifestyle</li>
@@ -78,7 +78,7 @@ const Kid = () => {
           <li className="hover:text-black cursor-pointer">Basketball</li>
         </ul>
         {/* Clothing*/}
-        <ul className="flex flex-col gap-2">
+        <ul className="flex flex-col gap-2  w-[17%]">
           <li className="text-black">Clothing </li>
           <li className="hover:text-black cursor-pointer">All Clothing</li>
           <li className="hover:text-black cursor-pointer">
@@ -98,7 +98,7 @@ const Kid = () => {
           </li>
         </ul>
         {/* Kids by age */}
-        <ul className="flex flex-col gap-2">
+        <ul className="flex flex-col gap-2  w-[17%]">
           <li className="text-black">Kids by age</li>
           <li className="hover:text-black cursor-pointer">
             Older Kids (7-15years)
@@ -112,7 +112,7 @@ const Kid = () => {
         </ul>
 
         {/* Accessories and Equipment */}
-        <ul className="flex flex-col gap-2">
+        <ul className="flex flex-col gap-2  w-[17%]">
           <li className="text-black">Accessories and Equipment</li>
           <li className="hover:text-black cursor-pointer">
             All Accessories and Equipment

@@ -1,0 +1,9 @@
+@media (min-width: 1023px) {
+  .buttonEffect:hover {
+    transform: scale(1.1);
+  }
+
+  .buttonEffect:active {
+    transform: scale(1);
+  }
+}
