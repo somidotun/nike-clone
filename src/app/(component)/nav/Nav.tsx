@@ -15,8 +15,8 @@ const Nav = () => {
     <section className="z-[200]">
       <Media
         queries={{
-          small: "(max-width: 599px)",
-          large: "(min-width: 600px)",
+          small: "(max-width: 767px)",
+          large: "(min-width: 768px)",
         }}
       >
         {(matches) => (
