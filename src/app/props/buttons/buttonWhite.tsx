@@ -12,7 +12,7 @@ const ButtonWhite = ({ style, text, onClick }: Props) => {
       onClick={onClick}
       className={`${style} hover:bg-[#CACACB]  px-5
          py-1 rounded-3xl bg-white text-black
-          border-black hover:border-white border-[1px] buttonEffect cub`}
+          border-black hover:border-white border-[1px] buttonEffect`}
       type="button"
     >
       {text}

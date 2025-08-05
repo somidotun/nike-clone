@@ -11,13 +11,37 @@ import { MdOutlinePersonOutline } from "react-icons/md";
 import { motion } from "framer-motion";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+import { useToggleCart } from "@/app/store/cartOpen";
+import { useCartStore } from "@/app/store/cartStore";
+import Cart from "../../body/price/priceProp.tsx/cart";
 
 const MobileNav = () => {
+  const { setToggledCart, isToggledCart } = useToggleCart();
+  const { getTotalItems } = useCartStore();
+
+  const handleCart = () => {
+    if (isToggledCart) {
+      // If already active, close it
+      setToggledCart(false);
+    } else {
+      // If not active, open it and close CART
+      setToggledCart(true);
+    }
+  };
+
   // open menu
   const [open, setOpen] = useState<boolean>(false);
 
   const handleOpen = () => {
-    setOpen((prev) => !prev);
+    if (open) {
+      // If already active, close it
+      setOpen(false);
+      setToggledCart(false);
+    } else {
+      // If not active, open it and close
+      setToggledCart(false);
+      setOpen(true);
+    }
   };
 
   // animation variant
@@ -79,13 +103,26 @@ const MobileNav = () => {
             </SignedIn>
           </div>
 
+          {/* logos */}
           <div className="flex flex-row gap-4">
             <p>
               <FaSearch className="h-10 text-2xl" />
             </p>
 
-            <p>
-              <FaCartPlus className="h-10 text-2xl" />
+            <p
+              className="relative w-6 hover:cursor-pointer"
+              onClick={handleCart}
+            >
+              <FaCartPlus className="h-10" />
+
+              {getTotalItems() !== 0 && (
+                <p
+                  className="h-5 w-5 bg-orange-400 absolute bottom-0
+                       rounded-full right-0 text-sm pl-1"
+                >
+                  {getTotalItems()}
+                </p>
+              )}
             </p>
 
             <div onClick={handleOpen} className="z-[150]">
@@ -102,6 +139,13 @@ const MobileNav = () => {
           </div>
         </div>
       </nav>
+
+      {/* cart */}
+      {isToggledCart && (
+        <div>
+          <Cart />
+        </div>
+      )}
 
       <div>
         {open && (
