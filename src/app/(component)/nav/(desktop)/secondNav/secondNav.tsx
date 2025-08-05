@@ -2,9 +2,7 @@ import React from "react";
 import one from "../../../../images/one.jpg";
 import Image from "next/image";
 import Link from "next/link";
-import { FaSearch } from "react-icons/fa";
 import { FaCartPlus } from "react-icons/fa";
-import { CiHeart } from "react-icons/ci";
 import { useToggleStore } from "@/app/store/useToggleStore";
 import { useToggleMen } from "@/app/store/useToggleMen";
 import { useToggleWomen } from "@/app/store/useToggleWomen";
@@ -175,14 +173,6 @@ const SecondNav = () => {
         {/* icons */}
 
         <div className="flex flex-row gap-5">
-          <p>
-            <FaSearch className="h-10" />
-          </p>
-
-          <p>
-            <CiHeart className="h-10" />
-          </p>
-
           <p className="relative w-6 hover:cursor-pointer" onClick={handleCart}>
             <FaCartPlus className="h-10" />
 
