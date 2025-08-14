@@ -6,7 +6,7 @@ import Ambassador from "./Ambassador/ambassador";
 
 const Body = () => {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-10">
       {/* images */}
       <Suspense fallback={<p>Loading ...</p>}>
         <ControlBody />

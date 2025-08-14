@@ -11,20 +11,20 @@ const MobileAmbassador = () => {
         {/* background image */}
 
         <Image
-          className=" w-full h-[36rem] "
+          className=" w-full h-[37.4rem] "
           src={haaland2}
           alt="haaland"
           priority={true}
         />
         {/* text */}
         <text
-          className="absolute bottom-0  text-center
-          text-black w-full flex flex-col gap-2 lg:pl-8 "
+          className="absolute bottom-0  text-center  bg-[#0000005e]
+          text-white w-full flex flex-col gap-2 p-4  "
         >
-          <p>Athlete picks</p>
-          <p className="text-lg  w-full">Erling Haaland</p>
+          <p className="text-xl">Athlete picks</p>
+          <p className="text-2xl  w-full">Erling Haaland</p>
           <div>
-            <ButtonBlack style="w-20" text="Shop" />
+            <ButtonBlack style="w-40 p-4" text="Shop" />
           </div>
         </text>
       </div>
