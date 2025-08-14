@@ -80,8 +80,8 @@ const MobileNav = () => {
           </p>
         </Link>
 
+        {/* icons */}
         <div className="flex w-36 flex-row justify-between">
-          {/* icons */}
           <div className="flex flex-row gap-3">
             {/*sign in */}
             <SignedOut>
@@ -110,7 +110,9 @@ const MobileNav = () => {
             </p>
 
             <p
-              className="relative w-6 hover:cursor-pointer"
+              className={`relative w-6   ${
+                getTotalItems() !== 0 && !isToggledCart && "animate-bounce"
+              }`}
               onClick={handleCart}
             >
               <FaCartPlus className="h-10" />

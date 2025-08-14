@@ -173,7 +173,12 @@ const SecondNav = () => {
         {/* icons */}
 
         <div className="flex flex-row gap-5">
-          <p className="relative w-6 hover:cursor-pointer" onClick={handleCart}>
+          <p
+            className={`relative w-6 hover:cursor-pointer ${
+              getTotalItems() !== 0 && !isToggledCart && "animate-bounce"
+            } `}
+            onClick={handleCart}
+          >
             <FaCartPlus className="h-10" />
 
             {getTotalItems() !== 0 && (

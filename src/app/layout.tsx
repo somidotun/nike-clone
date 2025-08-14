@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Nav from "./(component)/nav/Nav";
 import { ClerkProvider } from "@clerk/nextjs";
+import Footer from "./(component)/footer/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,8 +42,11 @@ export default function RootLayout({
 
           {/* body */}
           <div className={`${geistMono}`}>{children}</div>
+
           {/*footer  */}
-          <footer>footer</footer>
+          <footer>
+            <Footer />
+          </footer>
         </body>
       </html>
     </ClerkProvider>

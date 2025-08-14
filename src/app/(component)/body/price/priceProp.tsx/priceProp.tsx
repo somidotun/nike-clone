@@ -3,7 +3,6 @@
 import ButtonWhite from "@/app/props/buttons/buttonWhite";
 import { useCartStore } from "@/app/store/cartStore";
 import Image, { StaticImageData } from "next/image";
-// import { FaHeart } from "react-icons/fa";
 
 type Props = {
   altText: string;
