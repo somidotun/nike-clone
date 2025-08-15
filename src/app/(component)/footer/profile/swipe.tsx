@@ -28,7 +28,9 @@ const Swipe = () => {
         modules={[EffectFlip, Pagination]}
       >
         <SwiperSlide
-          className="max-h-[38vh] md:max-h-[25vh] lg:max-h-[30vh] 
+          className="max-h-[38vh] 
+           md:max-h-[25vh]
+           lg:max-h-[30vh] 
          rounded-lg   w-full"
         >
           <Image
