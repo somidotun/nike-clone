@@ -170,74 +170,74 @@ const Footer = () => {
           {/* contact icons */}
           <div className="flex flex-row justify-between">
             {/* twitter(x) */}
-            <p
-              className="w-8 h-8  bg-white border-[1px] p-2 rounded-xl
-             hover:cursor-pointer hover:bg-black group"
+            <Link
+              href="https://x.com/ayo_somidotun"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Link
-                href="https://x.com/ayo_somidotun"
-                target="_blank"
-                rel="noopener noreferrer"
+              <p
+                className="w-8 h-8  bg-white border-[1px] p-2 rounded-xl
+             hover:cursor-pointer hover:bg-black group"
               >
                 <BsTwitterX className="group-hover:text-white" />
-              </Link>
-            </p>
+              </p>
+            </Link>
 
             {/* whatsapp */}
-            <p
-              className="w-8 h-8  bg-white border-[1px] p-2 rounded-xl
-             hover:cursor-pointer hover:bg-black group"
+            <Link
+              href="https://wa.me/qr/PAH5XQKI5CDSN1"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Link
-                href="https://wa.me/qr/PAH5XQKI5CDSN1"
-                target="_blank"
-                rel="noopener noreferrer"
+              <p
+                className="w-8 h-8  bg-white border-[1px] p-2 rounded-xl
+             hover:cursor-pointer hover:bg-black group"
               >
                 <IoLogoWhatsapp className="group-hover:text-white" />
-              </Link>
-            </p>
+              </p>{" "}
+            </Link>
 
             {/* instagram */}
-            <p
-              className="w-8 h-8  bg-white border-[1px] p-2 rounded-xl
-             hover:cursor-pointer group hover:bg-black "
+            <Link
+              href="https://www.instagram.com/somidotun07/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Link
-                href="https://www.instagram.com/somidotun07/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <p
+                className="w-8 h-8  bg-white border-[1px] p-2 rounded-xl
+             hover:cursor-pointer group hover:bg-black "
               >
                 <FiInstagram className="group-hover:text-white" />
-              </Link>
-            </p>
+              </p>
+            </Link>
 
             {/* tiktok */}
-            <p
-              className="w-8 h-8  bg-white border-[1px] p-2 rounded-xl
-             hover:cursor-pointer hover:bg-black group"
+            <Link
+              href="https://www.tiktok.com/@somidotunjohn?lang=en"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Link
-                href="https://www.tiktok.com/@somidotunjohn?lang=en"
-                target="_blank"
-                rel="noopener noreferrer"
+              <p
+                className="w-8 h-8  bg-white border-[1px] p-2 rounded-xl
+             hover:cursor-pointer hover:bg-black group"
               >
                 <FaTiktok className="group-hover:text-white" />
-              </Link>
-            </p>
+              </p>
+            </Link>
 
             {/* Linkedin */}
-            <p
-              className="w-8 h-8  bg-white border-[1px] p-2 rounded-xl
-             hover:cursor-pointer hover:bg-black group"
+            <Link
+              href="https://www.linkedin.com/in/ayo-oluwole-oluwasomidotun-51a94522a/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Link
-                href="https://www.linkedin.com/in/ayo-oluwole-oluwasomidotun-51a94522a/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <p
+                className="w-8 h-8  bg-white border-[1px] p-2 rounded-xl
+             hover:cursor-pointer hover:bg-black group"
               >
                 <FaLinkedin className="group-hover:text-white" />
-              </Link>
-            </p>
+              </p>
+            </Link>
 
             <p
               className="w-8 h-8 border-[1px] p-1 rounded-xl
