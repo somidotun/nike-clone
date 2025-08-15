@@ -19,7 +19,7 @@ const SwipeFolder = () => {
       <div className=" flex flex-row justify-between w-full">
         <div
           className="h-80 w-[90%]  px-3 py-0 
-         lg:w-[95%] lg:h-64"
+         lg:w-full lg:h-64"
         >
           <Swipe />
         </div>

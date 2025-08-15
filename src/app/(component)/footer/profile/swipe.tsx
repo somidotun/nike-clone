@@ -22,13 +22,15 @@ const Swipe = () => {
           clickable: true,
         }}
         className="mySwiper
-         max-h-[40vh]  w-full
-         md:max-h-[35vh]
-         lg:pl-16 lg:max-h-[30vh]  "
+         max-h-[38vh]  w-full
+         md:max-h-[25vh]
+         lg:max-h-[30vh]  "
         modules={[EffectFlip, Pagination]}
       >
         <SwiperSlide
-          className="max-h-[32vh] md:max-h-[35vh] lg:max-h-[30vh] 
+          className="max-h-[38vh] 
+           md:max-h-[25vh]
+           lg:max-h-[30vh] 
          rounded-lg   w-full"
         >
           <Image
@@ -37,8 +39,8 @@ const Swipe = () => {
             width={300}
             height={400}
             className="w-full object-cover
-               max-h-[32vh]
-               md:max-h-[35vh]
+               max-h-[38vh]
+               md:max-h-[25vh]
                lg:max-h-[30vh]
                rounded-2xl"
             priority
@@ -46,7 +48,7 @@ const Swipe = () => {
         </SwiperSlide>
 
         <SwiperSlide
-          className="max-h-[32vh] md:max-h-[35vh]
+          className="max-h-[38vh] md:max-h-[25vh]
           lg:max-h-[30vh]  rounded-lg  w-full"
         >
           <Image
@@ -55,8 +57,8 @@ const Swipe = () => {
             width={300}
             height={400}
             className="w-full object-cover
-              max-h-[32vh]
-               md:max-h-[35vh]
+              max-h-[38vh]
+               md:max-h-[25vh]
                lg:max-h-[30vh]
                rounded-2xl"
             priority
