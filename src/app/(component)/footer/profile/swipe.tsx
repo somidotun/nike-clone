@@ -22,14 +22,14 @@ const Swipe = () => {
           clickable: true,
         }}
         className="mySwiper
-         max-h-[50vh] 
-         md:max-h-[25vh]
-         lg:pl-16 lg:max-h-[40vh]  "
+         max-h-[40vh]  w-full
+         md:max-h-[35vh]
+         lg:pl-16 lg:max-h-[30vh]  "
         modules={[EffectFlip, Pagination]}
       >
         <SwiperSlide
-          className="max-h-[45vh] md:max-h-[25vh] lg:max-h-[40vh] 
-         rounded-lg  "
+          className="max-h-[32vh] md:max-h-[35vh] lg:max-h-[30vh] 
+         rounded-lg   w-full"
         >
           <Image
             src={Dotun}
@@ -37,24 +37,27 @@ const Swipe = () => {
             width={300}
             height={400}
             className="w-full object-cover
-               max-h-[45vh]
-               md:max-h-[25vh]
-               lg:max-h-[40vh]
+               max-h-[32vh]
+               md:max-h-[35vh]
+               lg:max-h-[30vh]
                rounded-2xl"
             priority
           />
         </SwiperSlide>
 
-        <SwiperSlide className="max-h-[45vh] md:max-h-[25vh] lg:max-h-[40vh]  rounded-lg  ">
+        <SwiperSlide
+          className="max-h-[32vh] md:max-h-[35vh]
+          lg:max-h-[30vh]  rounded-lg  w-full"
+        >
           <Image
             src={dotun2}
             alt="My second picture"
             width={300}
             height={400}
             className="w-full object-cover
-              max-h-[45vh]
-               md:max-h-[25vh]
-               lg:max-h-[40vh]
+              max-h-[32vh]
+               md:max-h-[35vh]
+               lg:max-h-[30vh]
                rounded-2xl"
             priority
           />
